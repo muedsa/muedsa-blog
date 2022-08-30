@@ -4,10 +4,9 @@ title: About
 date: 2022-08-30
 ---
 
-import {SITE_NAME, AUTHOR_NAME} from '../theme.config';
-import Image from 'next/image'
+# {process.env.NEXT_PUBLIC_SITE_NAME}
 
-# {SITE_NAME}
+import Image from 'next/image'
 
 <Image
   src="/images/avatr.jpg"
@@ -21,4 +20,4 @@ XD
 
 ---
 
-- GitHub [@{AUTHOR_NAME}](https://github.com/MUedsa)
+- GitHub [@{process.env.NEXT_PUBLIC_AUTHOR_NAME}](https://github.com/MUedsa)
