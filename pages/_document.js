@@ -1,12 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { SITE_NAME, SITE_URL } from '../theme.config';
 
 export default function Document() {
   const meta = {
-    title: SITE_NAME,
-    description: 'MUEDSA blog. XD',
+    title: process.env.NEXT_PUBLIC_SITE_NAME,
+    description: 'MUEDSA Blog. XD',
     image: 'https://avatars.githubusercontent.com/u/7676275?v=4?s=400',
-    site: SITE_URL
+    site: process.env.NEXT_PUBLIC_SITE_HOST
   }
 
   return (
