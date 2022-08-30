@@ -1,9 +1,15 @@
-const YEAR = new Date().getFullYear()
+const YEAR = new Date().getFullYear();
+export const AUTHOR_NAME = 'MUEDSA';
+export const SITE_NAME = 'MUEDSA BLOG';
+export const SITE_URL = 'https://www.muedsa.com';
 
 export default {
+  authorName: AUTHOR_NAME,
+  siteName: SITE_NAME,
+  siteUrl: SITE_URL,
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © Your Name.
+      <time>{YEAR}</time> © {SITE_NAME}.
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
         a {

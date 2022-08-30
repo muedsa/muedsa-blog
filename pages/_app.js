@@ -3,6 +3,8 @@ import Head from 'next/head'
 
 import '../styles/main.css'
 
+import {SITE_URL, SITE_NAME, AUTHOR_NAME} from '../theme.config'
+
 export default function Nextra({ Component, pageProps }) {
   return (
     <>

@@ -1,10 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { SITE_NAME, SITE_URL } from '../theme.config';
 
 export default function Document() {
   const meta = {
-    title: 'Next.js Blog Starter Kit',
-    description: 'Clone and deploy your own Next.js portfolio in minutes.',
-    image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
+    title: SITE_NAME,
+    description: 'MUEDSA blog. XD',
+    image: 'https://avatars.githubusercontent.com/u/7676275?v=4?s=400',
+    site: SITE_URL
   }
 
   return (
@@ -17,7 +19,7 @@ export default function Document() {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yourname" />
+        <meta name="twitter:site" content={meta.site} />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
