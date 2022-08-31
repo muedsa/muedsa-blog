@@ -71,3 +71,7 @@ article a > img {
 article a > img +img {
   margin-left: 10px;
 }
+
+img.circle {
+  border-radius: 50%;
+}
