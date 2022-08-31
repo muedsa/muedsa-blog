@@ -1,13 +1,15 @@
 import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
+import {DefaultSeo} from 'next-seo';
 
 import '../styles/main.css'
+import SEO_CONFIG from '../next-seo.config';
 
-import {SITE_URL, SITE_NAME, AUTHOR_NAME} from '../theme.config'
 
 export default function Nextra({ Component, pageProps }) {
   return (
     <>
+      <DefaultSeo {...SEO_CONFIG}/>
       <Head>
         <link
           rel="alternate"
