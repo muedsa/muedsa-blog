@@ -63,3 +63,11 @@ img.next-image {
 .nav-line .nav-link {
   color: #69778c;
 }
+
+article a > img {
+  margin: 0 !important;
+  display: inherit !important;
+}
+article a > img +img {
+  margin-left: 10px;
+}
