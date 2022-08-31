@@ -1,9 +1,11 @@
+import { SITE } from './next-seo.config';
+
 const YEAR = new Date().getFullYear();
 
 export default {
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © {process.env.NEXT_PUBLIC_SITE_NAME}.
+      <time>{YEAR}</time> © {SITE.name}.
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
         a {

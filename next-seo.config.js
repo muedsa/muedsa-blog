@@ -1,4 +1,4 @@
-const SITE = {
+export const SITE = {
   name: 'MUEDSA BLOG',
   url: 'https://www.muedsa.com',
   description: 'MUEDSA Blog. XD',

@@ -5,11 +5,12 @@ date: 2022-08-30
 ---
 
 import Image from 'next/image';
-import {NextSeo} from 'next-seo';
+import { NextSeo } from 'next-seo';
+import { SITE } from '../next-seo.config';
 
 <NextSeo title="About"/>
 
-# {process.env.NEXT_PUBLIC_SITE_NAME}
+# {SITE.name}
 
 
 <Image
@@ -24,4 +25,4 @@ XD
 
 ---
 
-- GitHub [@{process.env.NEXT_PUBLIC_AUTHOR_NAME}](https://github.com/MUedsa)
+- GitHub [@MUEDSA](https://github.com/MUedsa)
