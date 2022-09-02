@@ -1201,10 +1201,10 @@ nextra-theme-blog@^2.0.0-beta.21:
     "@mdx-js/react" "^2.1.2"
     next-themes "^0.2.0-beta.2"
 
-nextra@^2.0.0-beta.21:
-  version "2.0.0-beta.21"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.0.0-beta.21.tgz#465ed51dfa6539c2bb49d13a85e43e0519945699"
-  integrity sha512-st1tIJVoyCyaKYF+SH3ZlJhDhohTbuF5LU9wzpQMFQgMI03/86nSIctTeyk6dzn/TS3JyF78L+Mmmjm8p0n5eQ==
+nextra@^2.0.0-beta.24:
+  version "2.0.0-beta.24"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.0.0-beta.24.tgz#de269eafa0f3cf1d151e3a2a907b4bfc6f3e6df6"
+  integrity sha512-vGIHxc84yV0igLYwOvYTAZD5CkJkipMDU6Qm0mWfANb1QiI3WbAL/LRdHj5Jl1H9h3IZ/Hz3QAEmRhjR5cXQBA==
   dependencies:
     "@mdx-js/mdx" "^2.1.2"
     "@napi-rs/simple-git" "^0.1.8"
