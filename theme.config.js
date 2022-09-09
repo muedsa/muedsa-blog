@@ -1,11 +1,11 @@
-import { SITE } from './next-seo.config';
+import SiteConfig from './site.config';
 
 const YEAR = new Date().getFullYear();
 
 export default {
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © {SITE.name}.
+      <time>{YEAR}</time> © {SiteConfig.name}.
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
         a {
@@ -19,5 +19,6 @@ export default {
         }
       `}</style>
     </small>
-  )
+  ),
+  titleSuffix: ' | ' + SiteConfig.name
 }

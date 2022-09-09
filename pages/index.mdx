@@ -5,12 +5,9 @@ date: 2022-08-30
 ---
 
 import Image from 'next/image';
-import { NextSeo } from 'next-seo';
-import { SITE } from '../next-seo.config';
+import SiteConfig from "../site.config.js";
 
-<NextSeo title="About"/>
-
-# {SITE.name}
+# {SiteConfig.name}
 
 <div style={{display: "flex", justifyContent: "center"}}>
   <Image
