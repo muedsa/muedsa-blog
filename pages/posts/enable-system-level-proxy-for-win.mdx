@@ -1,0 +1,44 @@
+---
+title: Win系统代理设置
+date: 2019/1/30
+description: 如何启用Win的系统级代理
+tag: Development
+author: MUEDSA
+---
+
+> 在公司摸鱼拆机换固态重装电脑， 更新windows时发现公司屏蔽了微软的windows更新IP，开启SS全局模式并没有用处。但在[https://docs.microsoft.com/zh-cn/windows/deployment/update/windows-update-troubleshooting](https://docs.microsoft.com/zh-cn/windows/deployment/update/windows-update-troubleshooting)找到了下面一段。
+> Windows 更新使用 WinHttp 具有部分范围请求 (RFC 7233) 来从 Windows 更新服务器下载更新和应用程序或本地 WSUS 服务器。 由于此代理服务器在网络上配置服务器必须支持 HTTP 范围请求。 如果在 Internet Explorer （用户级别），但不是在 WinHTTP （系统级别） 进行配置代理服务器，连接到 Windows 更新将失败。
+
+## WinHTTP
+Microsoft Windows HTTP Services (WinHTTP) provides developers with a server-supported, high-level interface to the HTTP/1.1 Internet protocol. WinHTTP is designed to be used primarily in server-based scenarios by server applications that communicate with HTTP servers.
+
+WinINet was designed as an HTTP client platform for interactive desktop applications. WinINet displays a user interface for some operations such as collecting user credentials. WinHTTP, however, handles these operations programmatically. Server applications that require HTTP client services should use WinHTTP instead of WinINet. For more information, see Porting WinINet Applications to WinHTTP
+
+WinHTTP is also designed for use in system services and HTTP-based client applications. However, single-user applications that require FTP protocol functionality, cookie persistence, caching, automatic credential dialog handling, Internet Explorer compatibility, or downlevel platform support should consider using WinINet.
+
+
+This interface is accessible from C/C++ by using either the WinHTTP application programming interface (API), or by using the IWinHttpRequest and IWinHttpRequestEvents interfaces. WinHTTP is also accessible from script and Microsoft Visual Basic through the WinHTTP object. For more information and descriptions of the individual functions, see the WinHTTP functions reference for the specific language.
+
+tarting with Windows 8, WinHTTP provides APIs to enable connections using the WebSocket Protocoll, such as WinHttpWebSocketSend and WinHttpWebSocketReceive.
+
+## 使用 netsh 命令中的 WinHTTP 配置代理服务器
+*你需要使用‘管理员权限’运行命令*
+
+```
+netsh winhttp set proxy ProxyServerName:PortNumber
+```
+
+你还可以从 Internet Explorer导入代理服务器设置：
+```
+netsh winhttp import proxy source=ie
+```
+
+重置代理为DIRECT:
+```
+netsh winhttp reset proxy
+```
+
+查询代理设置：
+```
+netsh winhttp show proxy
+```

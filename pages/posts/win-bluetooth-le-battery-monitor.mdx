@@ -1,0 +1,31 @@
+---
+title: Windows低功耗蓝牙电量监控
+date: 2019/11/6
+description: 一个Windows平台的应用
+tag: Development
+author: MUEDSA
+---
+
+> 本项目仅支持低功耗蓝牙
+>
+> 很多蓝牙耳机等设备可能不支持通过这种方式获取电量！
+
+[![GitHub Releases](https://img.shields.io/github/downloads/MUedsa/BluetoothLEBatteryMonitor/total?logo=github)](https://github.com/MUedsa/BluetoothLEBatteryMonitor/releases)
+
+## Windows BluetoothLE Battery Monitor
+![screenshot1](https://github.com/MUedsa/BluetoothLEBatteryMonitor/blob/v2.0/screenshot1.png?raw=true)
+![screenshot2](https://github.com/MUedsa/BluetoothLEBatteryMonitor/blob/v2.0/screenshot2.png?raw=true)
+
+## References
+- https://github.com/joric/bluetooth-battery-monitor
+- https://github.com/sensboston/BLEConsole
+
+## Note
+由于蓝牙设备并没有标准报告电量的协议，所以各种不同的蓝牙设备可能有不同的报告电量的方式。
+
+### 对于耳机
+苹果在自己的[Apple设计规范↗](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf)中说明了对于耳机设备Headphone/Headset可以通过HFP报告电量给苹果设备的一种方式。对HFP命令进行了扩展，使耳机可以报告电量给系统：
+- Request: AT+XAPL=[vendorID]-[productID]-[version],[features]
+- Response: AT+IPHONEACCEV=[Number of key/value pairs ],[key1 ],[val1 ],[key2 ],[val2 ],...
+
+很多耳机已经支持这种方式报告电量，安卓、windows[Win10 20H2]等也对这种方式进行了支持。但在win中仅在`设置-设备-蓝牙和其他设备`中进行了电量展示，在Win应用的开发文档中并未说明如何获取系统拿到的电量值。由于上面的方法在系统底层实现，有动手能力的同学可以自己编写Windows的蓝牙驱动以替换系统驱动来获取电量。

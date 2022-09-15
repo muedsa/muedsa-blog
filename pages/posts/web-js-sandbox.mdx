@@ -1,0 +1,103 @@
+---
+title: Web JS Sandbox
+date: 2019/8/26
+description: Web JS Sandbox.
+tag: Development
+author: MUEDSA
+---
+
+> 在很多环境下我们需要在我们的Web服务中运行一些未知的代码，如 Web插件，[codepen.io](codepen.io) 。这需要我们隔离这些代码的运行，代码只能访问我们提供的数据与接口。
+
+## `eval()`
+方便简洁
+
+对您 也对hacker而言
+
+## `<iframe>`
+
+iframe标签是最成熟的沙盒解决方案，有着大量的生产环境实践，用于各种Web服务，如向线上餐饮预定平台提供地图服务，codepen这样的代码展示等。
+
+[https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe)
+
+### 优势
+使用广泛的沙盒系统，拥有大量生产实践案例。虽然饱受安全性诟病（在过去），但是HTML5标准的 sandbox 属性能解决很多安全问题。
+
+### 劣势
+无法共享数据，必须使用异步通信的方式进行，于是需要序列化数据，有着序列化、异步处理和通信时间的开销，对于需要大量进行数据处理的网站这种开销是致命的。
+
+## JS中的JS解释器
+使用C++编写一个自定义的解释器，编译为WebAssembly，运行在网页中。
+
+使用JS编写一个JS解释器，直接运行在网页中，也可以把JS编译为WebAssembly。
+
+### 优势
+完全自控，自由的发挥空间
+
+技术上的挑战，对任何有野心的程序员都有极大的诱惑
+
+有着众多开源实现
+
+### 劣势
+解释器的技术成本，人员成本，开发时间成本......
+
+开源实现基本都处于开发阶段，没有用于生产实践
+
+
+## `With(){}`
+这是个JS语句！？？我好像从来没有听说过......
+
+With语句是个在标准中不建议使用的语句，他被定义为更改with(obj){}区域内的优先定义域为obj
+
+```
+let a = 'hello world';
+let b = {
+    a: '233'
+};
+with(b){
+    console.log(a); // 233
+}
+```
+
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/with](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/with)
+
+
+```
+let sandBox = {
+  g: {
+    document: {
+      write: function() {
+        document.writeln("document.write is unavailable <br>");
+      }
+    }
+  },
+  eval: function(eavlString){
+    with (sandBox.g) {
+      eval(eavlString);
+    }
+  }
+};
+
+eval('document.write("233<br>");');
+
+sandBox.eval('document.write("233<br>");');
+```
+[https://codepen.io/muedsa/pen/rNBjYpK/](https://codepen.io/muedsa/pen/rNBjYpK/)
+
+你还可以与代理一起使用来进行一些复杂操作
+
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+### 优势
+已经有一些由此开发的沙盒框架和在生产环境中使用的范例典范。
+
+[https://github.com/Agoric/realms-shim](https://github.com/Agoric/realms-shim)
+
+[https://github.com/Agoric/proposal-realms](https://github.com/Agoric/proposal-realms)
+
+[https://www.figma.com](https://www.figma.com)
+
+[https://agoric.com](https://agoric.com)
+
+### 劣势
+在作用域查找方面的性能损失，如果with语句块中的变量不在with语句中会，那么该变量的查找时间将变长。
+由于作用域问题，可能出现语义不明的情况。[with#语义不明的弊端](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/with#%E8%AF%AD%E4%B9%89%E4%B8%8D%E6%98%8E%E7%9A%84%E5%BC%8A%E7%AB%AF)
