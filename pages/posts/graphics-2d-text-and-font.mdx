@@ -1,0 +1,59 @@
+---
+title: 文本2D渲染
+date: 2022/9/21
+description: Java文本的2D渲染
+tag: Development
+author: MUEDSA
+---
+
+import Image from "next/image";
+
+## 相关文档
+- Oracle官方文档: [https://docs.oracle.com/javase/tutorial/2d/text/index.html](https://docs.oracle.com/javase/tutorial/2d/text/index.html)
+- ZetCode: [https://zetcode.com/gfx/java2d/textfonts/](https://zetcode.com/gfx/java2d/textfonts/)
+
+## Note
+
+### JavaSE内置的逻辑字体
+- Dialog
+- DialogInput
+- Monospaced
+- Serif
+- SansSerif
+
+### 内置的物理字体
+- Lucidia系列字体
+
+*这些字体不依赖与操作系统,可以直接使用，但并不支持中文。*
+
+### 测量字体
+```
+// get metrics from the graphics
+FontMetrics metrics = graphics.getFontMetrics(font);
+// get the height of a line of text in this
+// font and render context
+int hgt = metrics.getHeight();
+// get the advance of my text in this font
+// and render context
+int adv = metrics.stringWidth(text);
+// calculate the size of a box to hold the
+// text with some padding.
+Dimension size = new Dimension(adv+2, hgt+2);
+```
+<div style={{display: "flex", justifyContent: "center"}}>
+  <Image
+    src="/images/font-metrics.gif"
+    alt="Font Metrics"
+    width={394}
+    height={159}
+    priority
+    className="next-image"
+  />
+</div>
+
+### 可能用到的类
+- FontMetrics
+- RenderingHints
+- FontRenderContext
+- TextLayout
+- AttributedString
