@@ -1,0 +1,35 @@
+---
+title: Spring长轮询
+date: 2022/9/26
+description: SpringMVC中长轮询的实现
+tag: Development
+author: MUEDSA
+---
+
+### DeferredResult
+
+`org.springframework.web.context.request.async.DeferredResult`
+
+```
+@GetMapping("/async-deferredresult")
+public DeferredResult<ResponseEntity<?>> handleReqDefResult(Model model) {
+    LOG.info("Received async-deferredresult request");
+    DeferredResult<ResponseEntity<?>> output = new DeferredResult<>();
+
+    ForkJoinPool.commonPool().submit(() -> {
+        LOG.info("Processing in separate thread");
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+        }
+        output.setResult(ResponseEntity.ok("ok"));
+    });
+
+    LOG.info("servlet thread freed");
+    return output;
+}
+```
+
+more:
+- [https://www.baeldung.com/spring-deferred-result](https://www.baeldung.com/spring-deferred-result)
+- [https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-rest-http-2](https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-rest-http-2)
