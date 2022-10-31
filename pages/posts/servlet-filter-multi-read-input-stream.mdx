@@ -1,0 +1,86 @@
+---
+title: 在过滤器中多次读取请求体内容
+date: 2022/10/31
+description: 在Servlet的过滤器中多次读取HttpServletRequest的InputStream
+tag: Development
+author: MUEDSA
+---
+
+## 问题
+`HttpServletRequest`接口定义了`ServletInputStream getInputStream() throws IOException;`来获取HttpBody的二进制流。但是由于`ServletInputStream`通常是不可重复的读取的Stream(`inputStream.markSupported() === false`)，如果在Filter中读取了inputStream将导致过滤器链中的下一个Filter不能读取inputStream，Spring的`HttpMessageConverter`也不能读取inputStream，进一步会导致`Controller`层获取的参数对象(被`@RequestBody`或`@RequestPart`注解)为`null`。
+
+## 解决提出问题的人
+不在Filter中获取请求体内容！这下压力来到了......
+
+## @ControllerAdvice
+使用`@ControllerAdvice`继承`RequestBodyAdviceAdapter`或实现`RequestBodyAdvice`。可以在`beforeBodyRead`中读取`HttpInputMessage`但是记得要返回一个带着新`InputStream`的`HttpInputMessage`。
+
+注意：使用此方法对于不需要转换请求体到Controller层的请求无法捕获到,比如没有请求体的GET请求
+
+## 解决方式3
+构建一个新的可以重复读取`InputStream`的`HttpServletRequest`，并在`filterChain.doFilter`中使用此`HttpServletRequest`。
+
+Example:
+```java
+    public static class CachedBodyHttpServletRequest extends HttpServletRequestWrapper {
+        private final byte[] cachedBody;
+
+        public CachedBodyHttpServletRequest(HttpServletRequest request) throws IOException {
+            super(request);
+            InputStream requestInputStream = request.getInputStream();
+            this.cachedBody = StreamUtils.copyToByteArray(requestInputStream);
+        }
+
+        @Override
+        public ServletInputStream getInputStream() {
+            return new CachedBodyServletInputStream(this.cachedBody);
+        }
+
+        @Override
+        public BufferedReader getReader() {
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(this.cachedBody);
+            return new BufferedReader(new InputStreamReader(byteArrayInputStream));
+        }
+
+        public byte[] getCachedBody() {
+            return cachedBody;
+        }
+
+        public static class CachedBodyServletInputStream extends ServletInputStream {
+
+            private InputStream cachedBodyInputStream;
+
+            public CachedBodyServletInputStream(byte[] cachedBody) {
+                this.cachedBodyInputStream = new ByteArrayInputStream(cachedBody);
+            }
+
+            @Override
+            public boolean isFinished() {
+                boolean flag;
+                try {
+                    flag =  cachedBodyInputStream.available() == 0;
+                } catch (IOException e) {
+                    flag = true;
+                    log.error("CachedBodyServletInputStream.isFinished()", e);
+                }
+                return flag;
+            }
+
+            @Override
+            public boolean isReady() {
+                return true;
+            }
+
+            @Override
+            public void setReadListener(ReadListener listener) {
+
+            }
+
+            @Override
+            public int read() throws IOException {
+                return cachedBodyInputStream.read();
+            }
+        }
+    }
+```
+但是此示例有个问题，因为`super(request)`中的`request.inputStream`已经被读取完成,会导致`getParts()`&`getPart(name)`等另一些与请求体内容有关的方法不可用，也会使`Controller`中的`@RequestPart`获取的对象为`NULL`。
