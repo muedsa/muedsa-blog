@@ -1,0 +1,41 @@
+---
+title: Java双向认证的签名与验签
+date: 2022/10/31
+description: Java双向认证的签名与验签
+tag: Development
+author: MUEDSA
+---
+
+## 使用证书进行验签
+```java
+Signature sign = Signature.getInstance(certificate.getSigAlgName());
+sign.initVerify(certificate);
+sign.update(被签名的数据);
+boolean success = sign.verify(数据的签名);
+```
+
+## 使用私钥进行签名
+```java
+Signature sign = Signature.getInstance("SHA256withRSA");
+sign.initSign(privateKey);
+sign.update(要签名的数据);
+byte[] signData = sign.sign();
+```
+
+## 加载KeyStore并获取私钥
+```java
+KeyStore keyStore = KeyStore.getInstance("PKCS12");
+keyStore.load(fileInputStream, PRIVATE_KEY_STORE_PASSWORD);
+if(keyStore.getKey(alias, PRIVATE_KEY_PASSWORD) instanceof PrivateKey privateKey){
+  //todo privateKey something
+}
+```
+
+## 加载证书
+```java
+CertificateFactory factory = CertificateFactory.getInstance("X.509");
+Certificate certificate = factory.generateCertificate(inputStream);
+if(certificate instanceof X509Certificate x509Certificate) {
+   //todo x509Certificate something
+}
+```
