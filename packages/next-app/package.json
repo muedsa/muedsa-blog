@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "next dev",
     "preBuild": "node scripts/generate-rss.js",
+    "afterBuild": "node scripts/copy-dir.js",
     "build": "yarn preBuild && next build",
     "start": "next start"
   },
   "dependencies": {
+    "@muedsa-blog/web-components": "1.0.0",
+    "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.2",
     "next": "12.3.1",
     "nextra": "^2.0.0-beta.41",
@@ -17,8 +20,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rss": "^1.2.2",
-    "sharp": "^0.31.1",
-    "@muedsa-blog/web-components": "1.0.0"
+    "sharp": "^0.31.1"
   },
   "prettier": {
     "arrowParens": "always",
