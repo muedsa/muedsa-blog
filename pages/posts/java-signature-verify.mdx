@@ -22,13 +22,21 @@ sign.update(要签名的数据);
 byte[] signData = sign.sign();
 ```
 
-## 加载KeyStore并获取私钥
+## 加载PKC12文件并获取私钥
 ```java
 KeyStore keyStore = KeyStore.getInstance("PKCS12");
 keyStore.load(fileInputStream, PRIVATE_KEY_STORE_PASSWORD);
 if(keyStore.getKey(alias, PRIVATE_KEY_PASSWORD) instanceof PrivateKey privateKey){
   //todo privateKey something
 }
+```
+
+## 加载PEM文件(base64)获取私钥
+```
+// inputStream read to string var base64Str
+base64Str = base64Str.replace("-----BEGIN PRIVATE KEY-----", "").replace("-----END PRIVATE KEY-----", "").replaceAll("\\s+", "");
+KeyFactory kf = KeyFactory.getInstance("RSA");
+return kf.generatePrivate(new PKCS8EncodedKeySpec(Base64.getDecoder().decode(base64Str)));
 ```
 
 ## 加载证书
