@@ -1,27 +1,12 @@
 {
-  "private": true,
-  "license": "MIT",
-  "type": "module",
+  "private": "true",
+  "workspaces": ["packages/*"],
   "scripts": {
-    "dev": "next",
-    "preBuild": "node ./scripts/generate-rss.js",
-    "build": "yarn preBuild && next build",
-    "start": "next start"
+    "dev": "yarn workspace @muedsa-blog/web-components build && yarn workspace @muedsa-blog/next-app dev",
+    "build": "yarn workspace @muedsa-blog/web-components build && yarn workspace @muedsa-blog/next-app build",
+    "start": "yarn build && yarn workspace @muedsa-blog/next-app start"
   },
-  "dependencies": {
-    "gray-matter": "^4.0.2",
-    "next": "12.3.1",
-    "nextra": "^2.0.0-beta.41",
-    "nextra-theme-blog": "^2.0.0-beta.41",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rss": "^1.2.2"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none",
-    "semi": false
-  }
+  "keywords": [],
+  "name": "muedsa-blog",
+  "description": "muedsa blog"
 }
