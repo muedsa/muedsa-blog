@@ -20,7 +20,7 @@ export default function Nextra({ Component, pageProps }) {
           rel="alternate"
           type="application/rss+xml"
           title="RSS"
-          href="/mine/workspace/muedsa-blog/packages/next-app/public/feed.xml"
+          href="/feed.xml"
         />
         <link
           rel="preload"
