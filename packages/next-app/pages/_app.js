@@ -2,8 +2,17 @@ import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 
 import '../styles/main.css'
+import {useEffect} from "react";
 
 export default function Nextra({ Component, pageProps }) {
+
+  useEffect(() => {
+    const importWebComponents = async () => {
+      await import("@muedsa-blog/web-components");
+    };
+    importWebComponents();
+  }, []);
+
   return (
     <>
       <Head>
@@ -11,7 +20,7 @@ export default function Nextra({ Component, pageProps }) {
           rel="alternate"
           type="application/rss+xml"
           title="RSS"
-          href="/feed.xml"
+          href="/mine/workspace/muedsa-blog/packages/next-app/public/feed.xml"
         />
         <link
           rel="preload"

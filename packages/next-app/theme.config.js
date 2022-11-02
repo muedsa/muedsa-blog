@@ -1,4 +1,4 @@
-import SiteConfig from './site.config';
+import SiteConfig from './site.config.js';
 
 const YEAR = new Date().getFullYear();
 
@@ -6,7 +6,7 @@ export default {
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © {SiteConfig.name}.
-      <a href="/feed.xml">RSS</a>
+      <a href="/mine/workspace/muedsa-blog/packages/next-app/public/feed.xml">RSS</a>
       <style jsx>{`
         a {
           float: right;
