@@ -24,21 +24,21 @@ tarting with Windows 8, WinHTTP provides APIs to enable connections using the We
 ## 使用 netsh 命令中的 WinHTTP 配置代理服务器
 *你需要使用‘管理员权限’运行命令*
 
-```
+```shell
 netsh winhttp set proxy ProxyServerName:PortNumber
 ```
 
 你还可以从 Internet Explorer导入代理服务器设置：
-```
+```shell
 netsh winhttp import proxy source=ie
 ```
 
 重置代理为DIRECT:
-```
+```shell
 netsh winhttp reset proxy
 ```
 
 查询代理设置：
-```
+```shell
 netsh winhttp show proxy
 ```

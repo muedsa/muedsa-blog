@@ -32,7 +32,7 @@ if(keyStore.getKey(alias, PRIVATE_KEY_PASSWORD) instanceof PrivateKey privateKey
 ```
 
 ## 加载PEM文件(base64)获取私钥
-```
+```java
 // inputStream read to string var base64Str
 base64Str = base64Str.replace("-----BEGIN PRIVATE KEY-----", "").replace("-----END PRIVATE KEY-----", "").replaceAll("\\s+", "");
 KeyFactory kf = KeyFactory.getInstance("RSA");
