@@ -3841,10 +3841,10 @@ nextra-theme-blog@^2.0.1:
     "@mdx-js/react" "^2.1.5"
     next-themes "^0.2.1"
 
-nextra@^2.0.0-beta.45:
-  version "2.0.0-beta.45"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.0.0-beta.45.tgz#e91dbc4e0df1e6a7e11552baf980c4d02e643985"
-  integrity sha512-UP5p6WFXUNBNqpGc4NqyM7qzENsT0BrxUTlghgNDIZLmr+cPt0qGxcmeVjT4nD/EjEKeVeL2zO9J7y0Aqp/opQ==
+nextra@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.0.1.tgz#f761b894dac2a9587be41945a6de2f44a29ee950"
+  integrity sha512-IOBwqMREnadxGryNHvwr3sZuD90uyaTxCWi9yxDB56UndsLBTulKwXNIOdW1FV+vKTbSGpz89wNe665Moli7Kw==
   dependencies:
     "@mdx-js/mdx" "^2.1.3"
     "@napi-rs/simple-git" "^0.1.8"
