@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "custom-elements-hmr-polyfill": "^1.0.3",
-    "lit": "^2.6.0"
+    "lit": "^2.6.1"
   }
 }
