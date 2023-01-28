@@ -4001,10 +4001,10 @@ next@13.1.5:
     "@next/swc-win32-ia32-msvc" "13.1.5"
     "@next/swc-win32-x64-msvc" "13.1.5"
 
-nextra-theme-blog@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-2.2.3.tgz#c262a27a246b6fb01006b5452cfd54b4fbff373c"
-  integrity sha512-4ZVcxgAdsrJG5x9gEtxBJFozSpji1UnXwj50SMPZEoMVBI91RUM7SyUMuW5GwXdEY7WgkFhQrTl5jldYdkCr/g==
+nextra-theme-blog@^2.2.14:
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-2.2.14.tgz#931a731e9b4adb0d8ad11db4fcc81d8d307f63b4"
+  integrity sha512-A/C5q5uje74NUTVY6eb9v7nStMBYU+T7A4TnKDvAjmv10KOp2jTfFkT0pIlKFJ1VTsTSIKz9eIekoS3doU36fA==
   dependencies:
     next-themes "^0.2.1"
 
