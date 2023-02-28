@@ -16,7 +16,7 @@
     "gray-matter": "^4.0.2",
     "next": "13.2.1",
     "nextra": "^2.2.15",
-    "nextra-theme-blog": "^2.2.15",
+    "nextra-theme-blog": "^2.2.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rss": "^1.2.2",
