@@ -992,10 +992,10 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.0.0"
 
-"@mdx-js/mdx@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-2.2.1.tgz#611af1b68135c94eb467eb07e006fa1d8eebe029"
-  integrity sha512-hZ3ex7exYLJn6FfReq8yTvA6TE53uW9UHJQM9IlSauOuS55J9y8RtA7W+dzp6Yrzr00/U1sd7q+Wf61q6SfiTQ==
+"@mdx-js/mdx@^2.2.1", "@mdx-js/mdx@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-2.3.0.tgz#d65d8c3c28f3f46bb0e7cb3bf7613b39980671a9"
+  integrity sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==
   dependencies:
     "@types/estree-jsx" "^1.0.0"
     "@types/mdx" "^2.0.0"
@@ -1015,10 +1015,10 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
-"@mdx-js/react@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.2.1.tgz#5a70592418d52b1b01538c37e795034601c96ec5"
-  integrity sha512-YdXcMcEnqZhzql98RNrqYo9cEhTTesBiCclEtoiQUbJwx87q9453GTapYU6kJ8ZZ2ek1Vp25SiAXEFy5O/eAPw==
+"@mdx-js/react@^2.2.1", "@mdx-js/react@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.3.0.tgz#4208bd6d70f0d0831def28ef28c26149b03180b3"
+  integrity sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==
   dependencies:
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
@@ -4017,13 +4017,13 @@ nextra-theme-blog@^2.2.18:
   dependencies:
     next-themes "^0.2.1"
 
-nextra@^2.2.17:
-  version "2.2.17"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.2.17.tgz#7b7870d8e570848ee3dc4a9354acbb9827fe7360"
-  integrity sha512-IRfvDfUut6YgbivBVP8cG2DkxEBvODWQFiv7rqHD1tR9lBjiDKugyCi64zl1CiOlW5awc8xmbPDrzYak9l+A/w==
+nextra@^2.2.18:
+  version "2.2.18"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.2.18.tgz#1070bc756fae6b770763195d7707b7d0d68d2380"
+  integrity sha512-45fXVzSOOhjMs+bTcq/jsW4BT8bOeTZjceHEubDTFEdelqTv5rUtwVsHqt0iwzmj/braNdZWTITygY25rE65tA==
   dependencies:
-    "@mdx-js/mdx" "^2.2.1"
-    "@mdx-js/react" "^2.2.1"
+    "@mdx-js/mdx" "^2.3.0"
+    "@mdx-js/react" "^2.3.0"
     "@napi-rs/simple-git" "^0.1.8"
     github-slugger "^2.0.0"
     graceful-fs "^4.2.10"
@@ -4040,7 +4040,7 @@ nextra@^2.2.17:
     shiki "^0.14.0"
     slash "^3.0.0"
     title "^3.5.3"
-    unist-util-remove "^3.1.0"
+    unist-util-remove "^3.1.1"
     unist-util-visit "^4.1.1"
 
 node-abi@^3.3.0:
@@ -5247,7 +5247,7 @@ unist-util-remove-position@^4.0.0:
     "@types/unist" "^2.0.0"
     unist-util-visit "^4.0.0"
 
-unist-util-remove@^3.1.0:
+unist-util-remove@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/unist-util-remove/-/unist-util-remove-3.1.1.tgz#8bfa181aff916bd32a4ed30b3ed76d0c21c077df"
   integrity sha512-kfCqZK5YVY5yEa89tvpl7KnBBHu2c6CzMkqHUrlOqaRgGOMp0sMvwWOVrbAtj03KhovQB7i96Gda72v/EFE0vw==
