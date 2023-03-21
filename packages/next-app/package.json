@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@muedsa-blog/web-components": "1.0.0",
-    "fs-extra": "^11.1.0",
+    "fs-extra": "^11.1.1",
     "gray-matter": "^4.0.2",
     "next": "13.2.4",
     "nextra": "^2.2.19",
