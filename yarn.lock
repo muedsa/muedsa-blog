@@ -4031,10 +4031,10 @@ nextra-theme-blog@^2.3.0:
   dependencies:
     next-themes "^0.2.1"
 
-nextra@^2.2.19:
-  version "2.2.19"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.2.19.tgz#79bf4d8dfa48e14867de2db153ac08e2b230474f"
-  integrity sha512-QmgbJvT1lfmFCM8n5gfGTA5p8efw20N/oZP9ojBhWhmatq/PwAp7VoSeTan6TT9Yspv6PmnrgpqKhYGzPSkFVw==
+nextra@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.3.0.tgz#57d1beae6744926f70dc4389db1a7d06df8bb793"
+  integrity sha512-v17vMq2bJa15iKKt9+6AidSeIoKcK1ZlXmwqFqTgc0pQmRrl6pTJaSR36UZKcpMwvvLZ/7/xWuWV/OQB599O3g==
   dependencies:
     "@mdx-js/mdx" "^2.3.0"
     "@mdx-js/react" "^2.3.0"
@@ -4056,6 +4056,7 @@ nextra@^2.2.19:
     title "^3.5.3"
     unist-util-remove "^3.1.1"
     unist-util-visit "^4.1.1"
+    zod "^3.20.2"
 
 node-abi@^3.3.0:
   version "3.28.0"
@@ -5638,6 +5639,11 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zod@^3.20.2:
+  version "3.21.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
 
 zwitch@^2.0.0:
   version "2.0.2"
