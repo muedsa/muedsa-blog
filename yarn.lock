@@ -4066,10 +4066,10 @@ nextra-theme-blog@^2.5.0:
   dependencies:
     next-themes "^0.2.1"
 
-nextra@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.4.2.tgz#f9f130f1b47727ef661fa2ad63033e9d7c9960be"
-  integrity sha512-FH2BTCF8q3aBtc1w1pj1N6LMFyiMP5KL+w6Ph4s2M5FwTtv150dSNWWw5Hy2GgxLTi391B/CRkO31OCjp9trkA==
+nextra@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.5.0.tgz#0b9ca9a70e4a26390ed5aab7b5f3f3ae290aba51"
+  integrity sha512-YvknuUvV2fdFY3F3gsxNFA2lwDWg3KHEAiyumUxZKOnW8+yTwocXGFccD76Py9fYxcmUL9ARo+PEusnXlWmLeQ==
   dependencies:
     "@mdx-js/mdx" "^2.3.0"
     "@mdx-js/react" "^2.3.0"
@@ -4086,7 +4086,7 @@ nextra@^2.4.2:
     remark-gfm "^3.0.1"
     remark-math "^5.1.1"
     remark-reading-time "^2.0.1"
-    shiki "^0.14.0"
+    shiki "^0.14.2"
     slash "^3.0.0"
     title "^3.5.3"
     unist-util-remove "^3.1.1"
@@ -4893,10 +4893,10 @@ shell-quote@^1.7.3:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.0.tgz#20d078d0eaf71d54f43bd2ba14a1b5b9bfa5c8ba"
   integrity sha512-QHsz8GgQIGKlRi24yFc6a6lN69Idnx634w49ay6+jA5yFh7a1UY+4Rp6HPx/L/1zcEDPEij8cIsiqR6bQsE5VQ==
 
-shiki@^0.14.0:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.14.1.tgz#9fbe082d0a8aa2ad63df4fbf2ee11ec924aa7ee1"
-  integrity sha512-+Jz4nBkCBe0mEDqo1eKRcCdjRtrCjozmcbTUjbPTX7OOJfEbTZzlUWlZtGe3Gb5oV1/jnojhG//YZc3rs9zSEw==
+shiki@^0.14.2:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.14.2.tgz#d51440800b701392b31ce2336036058e338247a1"
+  integrity sha512-ltSZlSLOuSY0M0Y75KA+ieRaZ0Trf5Wl3gutE7jzLuIcWxLp5i/uEnLoQWNvgKXQ5OMpGkJnVMRLAuzjc0LJ2A==
   dependencies:
     ansi-sequence-parser "^1.1.0"
     jsonc-parser "^3.2.0"
