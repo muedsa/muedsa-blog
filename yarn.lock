@@ -4066,10 +4066,10 @@ nextra-theme-blog@^2.5.1:
   dependencies:
     next-themes "^0.2.1"
 
-nextra@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.5.0.tgz#0b9ca9a70e4a26390ed5aab7b5f3f3ae290aba51"
-  integrity sha512-YvknuUvV2fdFY3F3gsxNFA2lwDWg3KHEAiyumUxZKOnW8+yTwocXGFccD76Py9fYxcmUL9ARo+PEusnXlWmLeQ==
+nextra@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.5.1.tgz#cbdea18c633bb33c2a57d5aba9ffd33d1388f21d"
+  integrity sha512-/UO65BvXpyMcLdKGfzxzMPxUr5yuZ8qrrJGA3/lW6nNIxtlHsO3NdhA9Nkis0ia5GUZB2JXl0AhEmZ67oT9MVQ==
   dependencies:
     "@mdx-js/mdx" "^2.3.0"
     "@mdx-js/react" "^2.3.0"
