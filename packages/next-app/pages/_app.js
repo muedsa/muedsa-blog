@@ -1,7 +1,8 @@
 import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 
-import '../styles/main.css'
+import '../styles/main.css';
+import '../styles/gi-launch.css';
 import {useEffect} from "react";
 
 export default function Nextra({ Component, pageProps }) {

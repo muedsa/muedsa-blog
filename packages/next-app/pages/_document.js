@@ -8,6 +8,7 @@ export default function Document() {
         <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/webcomponents-loader.js"></script>
       </Head>
       <body>
+        <div id="genshin"></div>
         <Main />
         <NextScript />
       </body>
