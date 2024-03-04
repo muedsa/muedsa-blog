@@ -4898,10 +4898,10 @@ next@14.1.0:
     "@next/swc-win32-ia32-msvc" "14.1.0"
     "@next/swc-win32-x64-msvc" "14.1.0"
 
-nextra-theme-blog@^2.13.3:
-  version "2.13.3"
-  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-2.13.3.tgz#1adec314c2e09685ac86a1b706433f75c94e2cab"
-  integrity sha512-eU2qfrC+ypgLyer7qWQTT2crFMl/z0afA9l72+ao41+VoO5v9c9rHkByR1BGhaJ0xzZ/VzclPVaof4uQDyn7Fg==
+nextra-theme-blog@^2.13.4:
+  version "2.13.4"
+  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-2.13.4.tgz#1035f3e70091de2562b8e731ad63f35897283155"
+  integrity sha512-ORVWFW59WY1megGZZtzZE05wa6G24PAYGnKe+H7/xf3TFonOkZvOc+NTJc9res/A1/rRtgkkTz1r24CAhTHAyA==
   dependencies:
     next-themes "^0.2.1"
 
