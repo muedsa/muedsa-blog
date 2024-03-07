@@ -15,7 +15,7 @@
     "fs-extra": "^11.2.0",
     "gray-matter": "^4.0.2",
     "next": "14.1.2",
-    "nextra": "^2.13.3",
+    "nextra": "^2.13.4",
     "nextra-theme-blog": "^2.13.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
