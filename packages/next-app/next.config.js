@@ -3,12 +3,13 @@ import nextra from 'nextra';
 const withNextra = nextra('nextra-theme-blog', './theme.config');
 
 export default withNextra({
+  swcMinify: true,
   images: {
-    domains: [
-      'muedsa.com',
-      'github.com',
-      'raw.githubusercontent.com',
-      'pic1.zhimg.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: "**"
+      }
     ]
   }
 });
