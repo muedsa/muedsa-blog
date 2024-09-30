@@ -4840,10 +4840,10 @@ next-mdx-remote@^4.2.1:
     vfile "^5.3.0"
     vfile-matter "^3.0.1"
 
-next-themes@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.1.tgz#0c9f128e847979daf6c67f70b38e6b6567856e45"
-  integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
+next-themes@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"
+  integrity sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==
 
 next@14.2.13:
   version "14.2.13"
@@ -4868,12 +4868,12 @@ next@14.2.13:
     "@next/swc-win32-ia32-msvc" "14.2.13"
     "@next/swc-win32-x64-msvc" "14.2.13"
 
-nextra-theme-blog@^2.13.4:
-  version "2.13.4"
-  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-2.13.4.tgz#1035f3e70091de2562b8e731ad63f35897283155"
-  integrity sha512-ORVWFW59WY1megGZZtzZE05wa6G24PAYGnKe+H7/xf3TFonOkZvOc+NTJc9res/A1/rRtgkkTz1r24CAhTHAyA==
+nextra-theme-blog@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-3.0.1.tgz#ffe183fdf5ce792afcf7afcfca3ad691c386d85f"
+  integrity sha512-EplfrbhOEQnY0k7TRXMmDJmnNTJwSFJ7M/LBEb3hwWHYYMmTa8BruXtKHtW7oub6XUY5JATRDHzOyv7Cd8ktHg==
   dependencies:
-    next-themes "^0.2.1"
+    next-themes "^0.3.0"
 
 nextra@^2.13.4:
   version "2.13.4"
