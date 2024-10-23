@@ -8,7 +8,7 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.8",
+    "@babel/core": "^7.25.9",
     "@babel/preset-env": "^7.25.8",
     "babel-loader": "^9.2.1",
     "clean-webpack-plugin": "^4.0.0",
