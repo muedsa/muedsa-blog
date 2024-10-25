@@ -4611,10 +4611,10 @@ next@15.0.1:
     "@next/swc-win32-x64-msvc" "15.0.1"
     sharp "^0.33.5"
 
-nextra-theme-blog@^3.0.15:
-  version "3.0.15"
-  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-3.0.15.tgz#0a687f58d4d509582cd695861c9a625cdbf1a16f"
-  integrity sha512-xNw42DiQ4YIj1gqDsdzZ8x2UJYUE9Qdg5cLJkGZncIz9LZdtcpjZBUxJUWn8scGdS/Gui0w9qQQCGly7AEV7Aw==
+nextra-theme-blog@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-3.1.0.tgz#90389fb8dad874c9145f224c31830affe3ea011e"
+  integrity sha512-XoWbc+XfinhArw3Ec+6YjutOWWtGB1zCqYwBje79KnlP70zCrk/JL0wReEHzBX/S9MLU16oZoJ7Kd8AIS1ZFJQ==
   dependencies:
     next-themes "^0.3.0"
 
