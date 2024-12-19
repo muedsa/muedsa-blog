@@ -14,7 +14,7 @@
     "@muedsa-blog/web-components": "1.0.0",
     "fs-extra": "^11.2.0",
     "gray-matter": "^4.0.2",
-    "next": "15.1.0",
+    "next": "15.1.1",
     "nextra": "^2.13.4",
     "nextra-theme-blog": "^3.2.5",
     "react": "^18.3.1",
