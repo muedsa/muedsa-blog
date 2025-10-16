@@ -4622,6 +4622,11 @@ next-themes@^0.4.0:
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.4.3.tgz#ea54552d5986936d177eed393ea50b658ae44800"
   integrity sha512-nG84VPkTdUHR2YeD89YchvV4I9RbiMAql3GiLEQlPvq1ioaqPaIReK+yMRdg/zgiXws620qS1rU30TiWmmG9lA==
 
+next-view-transitions@^0.3.0:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/next-view-transitions/-/next-view-transitions-0.3.4.tgz#442372e1d55f25d565c063032231980784e224f0"
+  integrity sha512-SSiskenQ8JkEFGzPjvFwC5LGGoqgTxM5dxexkeugxvcXFLpWI2ZUh4IsCURD3ovW+8Ue7xXlrtrpy8b7XR7IwQ==
+
 next@15.5.5:
   version "15.5.5"
   resolved "https://registry.yarnpkg.com/next/-/next-15.5.5.tgz#a8ba762003718ef22dd5123b60b4c2ca71c882ba"
@@ -4643,12 +4648,14 @@ next@15.5.5:
     "@next/swc-win32-x64-msvc" "15.5.5"
     sharp "^0.34.3"
 
-nextra-theme-blog@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-3.3.1.tgz#546e561a9a6046056958b42a21338b630d9c147f"
-  integrity sha512-5bz8aDc4+lkcTVQWpr8gFdYhJiJXubmcV94nbUHKc1mtUrjnOqt/prQPqHAyKVKivMlViXqJKs3try5EqUyYnw==
+nextra-theme-blog@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-4.6.0.tgz#a2e56eff85d1b7eea66c8133a87d472f72982155"
+  integrity sha512-Fo3nhxiN4t4561XoQHHxPiuuhgZblCbMU1AWNe9w/pgU0TZowOCxiVtVmvNVVmg7GV8n+JmZAOzInR9Zfi57Rg==
   dependencies:
     next-themes "^0.4.0"
+    next-view-transitions "^0.3.0"
+    react-compiler-runtime "^19.1.0-rc.2"
 
 nextra@^2.13.4:
   version "2.13.4"
@@ -4993,6 +5000,11 @@ raw-body@2.5.2:
     http-errors "2.0.0"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-compiler-runtime@^19.1.0-rc.2:
+  version "19.1.0-rc.1-rc-af1b7da-20250421"
+  resolved "https://registry.yarnpkg.com/react-compiler-runtime/-/react-compiler-runtime-19.1.0-rc.1-rc-af1b7da-20250421.tgz#996cf954a27b7f73ade1710e44f4303fa84e80e2"
+  integrity sha512-Til/juI+Zfq+eYpGYn9lFxqW5RyJDs3ThOxmg0757aMrPpfx/Zb0SnGMVJhF3vw+bEQjJiD+xPFD3+kE0WbyeA==
 
 react-dom@^18.3.1:
   version "18.3.1"
